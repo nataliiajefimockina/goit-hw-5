@@ -146,24 +146,30 @@ header {
 }
 
 .ou-text {
-    display: block;
-    margin-bottom: 32px;
-}
-
-.text {
-    display: inline-block;
-    margin-left: 5px;
+    position: relative;
+    width: 276px;
+    margin: 0 auto 32px;
 }
 
 .ou-text::before,
 .ou-text::after {
     display: inline-block;
-    position: relative;
-    width: 21%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 41%;
     height: 2px;
+    margin: auto 0;
     background-image: linear-gradient(#666, #000);
     content: '';
-    vertical-align: middle;
+}
+
+.ou-text::before {
+    left: 8px;
+}
+
+.ou-text::after {
+    right: 8px;
 }
 
 .inform {
